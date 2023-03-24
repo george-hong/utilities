@@ -5,7 +5,7 @@ const obj = {};
  * @param value the value that you want to get type
  * @return {string} type of the value
  */
-const getValueType = (value: unknown): string => {
+function getValueType(value: unknown): string {
     return obj.toString.call(value).slice(8, -1);
 }
 

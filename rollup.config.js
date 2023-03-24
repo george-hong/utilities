@@ -17,8 +17,10 @@ export default {
   plugins: [
     // 用于处理使用node_modules中的模块
     nodeResolve(),
-    typescript(),
     // 代码压缩
+    typescript({
+      tsconfig: '../../tsconfig.json'
+    }),
     terser(),
   ]
 }

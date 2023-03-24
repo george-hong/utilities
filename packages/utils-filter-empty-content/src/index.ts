@@ -1,8 +1,8 @@
-import getValueType from "@h-utils/get-value-type";
-import operateObject from "@h-utils/operate-object";
+import getValueType from '@h-utils/get-value-type';
+import operateObject from '@h-utils/operate-object';
 
-const filterEmptyParams = (obj: any, isDeep: any) => {
-    return operateObject(obj, (key: any, value: any) => {
+const filterEmptyParams = (obj: unknown, isDeep = false) => {
+    return operateObject(obj, (key, value) => {
         const isArray = Array.isArray(value)
         const isObject = getValueType(value) === 'Object'
         if (isDeep && (isArray || isObject)) {
