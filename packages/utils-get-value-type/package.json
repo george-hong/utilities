@@ -8,7 +8,9 @@
         "build": "rollup --config ../../rollup.config.js",
         "clear": "rimraf ./dist"
     },
-    "files": ["dist"],
+    "files": [
+        "dist"
+    ],
     "author": "",
     "license": "ISC"
 }
