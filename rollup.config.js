@@ -19,6 +19,6 @@ export default {
     nodeResolve(),
     typescript(),
     // 代码压缩
-    // terser(),
+    terser(),
   ]
 }
