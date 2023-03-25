@@ -2,25 +2,28 @@ import typescript from '@rollup/plugin-typescript';
 import nodeResolve from '@rollup/plugin-node-resolve';
 import terser from '@rollup/plugin-terser';
 
-export default {
-  input: 'src/index.ts',
-  output: [
-    {
-      file: 'dist/index.cjs.js',
-      format: 'cjs',
+const getPackageConfig = (format, uglify = false) => {
+  const config = {
+    input: 'src/index.ts',
+    output: {
+      file: `dist/index.${format}.${uglify ? 'min.' : ''}js`,
+      format,
     },
-    {
-      file: 'dist/index.esm.js',
-      format: 'es',
-    },
-  ],
-  plugins: [
-    // 用于处理使用node_modules中的模块
-    nodeResolve(),
-    // 代码压缩
-    typescript({
-      tsconfig: '../../tsconfig.json'
-    }),
-    terser(),
-  ]
+    plugins: [
+      // 用于处理使用node_modules中的模块
+      nodeResolve(),
+      typescript({
+        tsconfig: `../../tsconfig.${format === 'cjs' ? '' : 'es.'}json`
+      }),
+    ]
+  }
+  if (uglify) config.plugins.push(terser())
+  return config;
 }
+
+export default [
+  getPackageConfig('cjs'),
+  getPackageConfig('cjs', true),
+  getPackageConfig('es'),
+  getPackageConfig('es', true)
+]

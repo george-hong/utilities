@@ -16,9 +16,9 @@
     "scripts": {
         "dev": "",
         "graph": "npx nx graph",
-        "build": "rollup --config",
+        "build": "npx lerna run build",
         "clear": "npx lerna run clear",
-        "build-all": "npx lerna run clear && npx lerna run build"
+        "build-all": "npm run clear && npm run build"
     },
     "author": "george-hong",
     "license": "ISC",
