@@ -12,11 +12,13 @@ const getPackageConfig = (format, uglify = false) => {
     plugins: [
       // 用于处理使用node_modules中的模块
       nodeResolve(),
+      // 处理typescript
       typescript({
         tsconfig: '../../tsconfig.json'
       }),
     ]
   }
+  // 判断是否需要混淆压缩
   if (uglify) config.plugins.push(terser())
   return config;
 }

@@ -1,5 +1,7 @@
 {
     "compilerOptions": {
+        // 有错误时不编译
+        "noEmit": true,
         // 生成对应 .d.ts 类型声明文件
         "declaration": true,
         // 声明文件输出目录

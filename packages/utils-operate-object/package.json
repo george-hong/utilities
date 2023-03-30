@@ -9,6 +9,6 @@
         "build": "rollup --config ../../rollup.config.mjs",
         "clear": "rimraf ./dist"
     },
-    "author": "",
+    "author": "george-hong",
     "license": "ISC"
 }
