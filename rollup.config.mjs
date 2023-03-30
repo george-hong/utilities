@@ -1,6 +1,6 @@
-import typescript from '@rollup/plugin-typescript';
 import nodeResolve from '@rollup/plugin-node-resolve';
-import terser from '@rollup/plugin-terser';
+import typescript from '@rollup/plugin-typescript'
+import terser from '@rollup/plugin-terser'
 
 const getPackageConfig = (format, uglify = false) => {
   const config = {
@@ -13,7 +13,7 @@ const getPackageConfig = (format, uglify = false) => {
       // 用于处理使用node_modules中的模块
       nodeResolve(),
       typescript({
-        tsconfig: `../../tsconfig.${format === 'cjs' ? '' : 'es.'}json`
+        tsconfig: '../../tsconfig.json'
       }),
     ]
   }
@@ -24,6 +24,6 @@ const getPackageConfig = (format, uglify = false) => {
 export default [
   getPackageConfig('cjs'),
   getPackageConfig('cjs', true),
-  getPackageConfig('es'),
-  getPackageConfig('es', true)
+  getPackageConfig('esm'),
+  getPackageConfig('esm', true)
 ]

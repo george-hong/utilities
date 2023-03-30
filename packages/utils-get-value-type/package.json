@@ -4,17 +4,11 @@
     "description": "",
     "main": "dist/index.cjs.js",
     "module": "dist/index.esm.js",
+    "types": "dist/index.d.ts",
     "scripts": {
-        "build": "rollup --config ../../rollup.config.js",
+        "build": "rollup --config ../../rollup.config.mjs",
         "clear": "rimraf ./dist"
     },
-    "files": [
-        "dist"
-    ],
-    "types": "dist/index.d.ts",
-    "publishConfig": {
-        "access": "public"
-    },
-    "author": "george-hong",
+    "author": "",
     "license": "ISC"
 }

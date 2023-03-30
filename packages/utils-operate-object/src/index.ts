@@ -1,4 +1,4 @@
-import { IUniformObject } from '../../../types';
+import { IUniformObject } from '../../../types/index.type';
 import type { IOperation } from './index.type';
 
 /**
@@ -13,13 +13,13 @@ function operateObject(objOrArr: unknown, operation: IOperation): null | IUnifor
     const isArray = Array.isArray(objOrArr);
     const result = isArray ? [] : {};
     !isArray && Object.entries(objOrArr).forEach((keyAndValue) => {
-        const [key, value] = keyAndValue
-        const {isNeed, key: operationKey, value: operationValue} = operation(key, value)
-        if (isNeed) (result as IUniformObject<unknown>)[operationKey || key] = operationValue
+        const [key, value] = keyAndValue;
+        const {isNeed, key: operationKey, value: operationValue} = operation(key, value);
+        if (isNeed) (result as IUniformObject<unknown>)[operationKey || key] = operationValue;
     });
     isArray && objOrArr.forEach((value, key) => {
-        const {isNeed, value: operationValue} = operation(key, value)
-        if (isNeed) (result as Array<unknown>)[(result as Array<unknown>).length] = operationValue
+        const {isNeed, value: operationValue} = operation(key, value);
+        if (isNeed) (result as Array<unknown>)[(result as Array<unknown>).length] = operationValue;
     });
     return result;
 }

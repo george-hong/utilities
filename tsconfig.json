@@ -1,16 +1,20 @@
 {
-  "compilerOptions": {
-    //    "declaration": true, // 生成对应 .d.ts 类型声明文件
-    //    "declarationDir": "dist", // 声明文件输出目录
-    //    "removeComments": true, // 移除注释
-    "target": "es2015",
-    "lib": ["esnext"],
-    "module": "commonjs",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitAny": true,
-    "skipLibCheck": true
-  },
-  "exclude": ["dist"]
+    "compilerOptions": {
+        // 生成对应 .d.ts 类型声明文件
+        "declaration": true,
+        // 声明文件输出目录
+        "declarationDir": "dist",
+        "target": "es2015",
+        "lib": [
+            "esnext"
+        ],
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "noImplicitAny": true,
+        "skipLibCheck": true
+    },
+    "exclude": [
+        "dist"
+    ]
 }
