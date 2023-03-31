@@ -1,6 +1,6 @@
 import nodeResolve from '@rollup/plugin-node-resolve';
-import typescript from '@rollup/plugin-typescript'
-import terser from '@rollup/plugin-terser'
+import typescript from '@rollup/plugin-typescript';
+import terser from '@rollup/plugin-terser';
 
 const getPackageConfig = (format, uglify = false) => {
   const config = {

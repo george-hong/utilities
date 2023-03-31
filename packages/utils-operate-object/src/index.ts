@@ -1,7 +1,7 @@
-import type {
+import {
     IOperation,
-    IUniformObject,
-} from '../index.type';
+    IUniformObject
+} from "../../../types/index.type";
 
 /**
  * get a new object/array that performed particular operation

@@ -1,9 +1,9 @@
 {
     "compilerOptions": {
-        // 有错误时不编译
-        "noEmit": true,
         // 生成对应 .d.ts 类型声明文件
         "declaration": true,
+        // 有错误时不编译
+        "noEmit": true,
         // 声明文件输出目录
         "declarationDir": "dist",
         "target": "es2015",
@@ -13,8 +13,9 @@
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "strict": true,
-        "noImplicitAny": false,
-        "skipLibCheck": true
+        "noImplicitAny": true,
+        "skipLibCheck": true,
+        "importHelpers": true
     },
     "exclude": [
         "dist",
