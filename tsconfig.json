@@ -17,8 +17,8 @@
         "skipLibCheck": true,
         "importHelpers": true
     },
-    "exclude": [
-        "dist",
-        "node_modules"
+    "include": [
+        "packages/*/src",
+        "types"
     ]
 }

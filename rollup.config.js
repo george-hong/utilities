@@ -6,7 +6,7 @@ const getPackageConfig = (format, uglify = false) => {
   const config = {
     input: 'src/index.ts',
     output: {
-      file: `dist/index.${format}.${uglify ? 'min.' : ''}js`,
+      file: `dist/index.${format}.${uglify ? 'prod.' : ''}js`,
       format,
     },
     plugins: [
