@@ -1,7 +1,14 @@
-import {
-    IOperation,
-    IUniformObject
-} from "../../../types/index.type";
+export type ObjectKeyType = string | number;
+
+export interface IUniformObject<K> {
+    [key: string]: K;
+}
+
+export interface IOperation {
+    (key: ObjectKeyType, value: unknown): {
+        isNeed: boolean; key?: ObjectKeyType; value?: unknown;
+    }
+}
 
 /**
  * get a new object/array that performed particular operation
