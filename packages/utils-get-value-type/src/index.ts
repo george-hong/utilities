@@ -6,7 +6,7 @@ const obj = {};
  * @return {string} type of the value
  */
 function getValueType(value: unknown): string {
-    return obj.toString.call(value).slice(8, -1);
+  return obj.toString.call(value).slice(8, -1);
 }
 
 export default getValueType;

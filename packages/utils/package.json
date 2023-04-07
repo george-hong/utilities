@@ -1,20 +1,20 @@
 {
-    "name": "@h-utils/h-utils",
-    "version": "0.0.1",
-    "type": "module",
-    "description": "",
-    "main": "dist/index.cjs.js",
-    "module": "dist/index.esm.js",
-    "types": "dist/index.d.ts",
-    "scripts": {
-        "build": "rollup --config ../../rollup.config.js",
-        "clear": "rimraf ./dist"
-    },
-    "author": "george-hong",
-    "license": "ISC",
-    "dependencies": {
-        "@h-utils/get-value-type": "0.0.1",
-        "@h-utils/operate-object": "0.0.1",
-        "@h-utils/filter-empty-content": "0.0.1"
-    }
+  "name": "@h-utils/h-utils",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rollup --config ../../rollup.config.js",
+    "clear": "rimraf ./dist"
+  },
+  "author": "george-hong",
+  "license": "ISC",
+  "dependencies": {
+    "@h-utils/get-value-type": "0.0.1",
+    "@h-utils/operate-object": "0.0.1",
+    "@h-utils/filter-empty-content": "0.0.1"
+  }
 }
