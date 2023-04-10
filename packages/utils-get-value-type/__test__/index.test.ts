@@ -1,7 +1,7 @@
 import getValueType from '../src/index';
 
 class CustomClass {}
-const objectThatHasNoPropotype = Object.create(null);
+const objectThatHasNoPrototype = Object.create(null);
 
 describe('get value type of', () => {
   // string
@@ -21,7 +21,7 @@ describe('get value type of', () => {
   test('null', () => expect(getValueType(null)).toBe('Null'));
   // object
   test('object', () => expect(getValueType({})).toBe('Object'));
-  test('object (no prototype)', () => expect(getValueType(objectThatHasNoPropotype)).toBe('Object'));
+  test('object (no prototype)', () => expect(getValueType(objectThatHasNoPrototype)).toBe('Object'));
   // array
   test('array', () => expect(getValueType([])).toBe('Array'));
   test('custom class', () => expect(getValueType(new CustomClass())).toBe('CustomClass'));
