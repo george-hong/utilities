@@ -10,6 +10,6 @@
   "bracketSpacing": true,
   "arrowParens": "always",
   "rangeStart": 0,
-  "endOfLine": "lf",
+  "endOfLine": "crlf",
   "singleAttributePerLine": true
 }

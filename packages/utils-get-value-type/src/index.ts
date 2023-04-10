@@ -1,4 +1,6 @@
 const obj = {};
+// use to check value is a object
+const OBJECT_STRING = 'Object';
 
 /**
  * get type of the value
@@ -6,7 +8,12 @@ const obj = {};
  * @return {string} type of the value
  */
 function getValueType(value: unknown): string {
-  return obj.toString.call(value).slice(8, -1);
+  const typeString = obj.toString.call(value).slice(8, -1);
+  return typeString === OBJECT_STRING
+    ? (value as object).constructor
+      ? (value as object).constructor.name
+      : OBJECT_STRING
+    : typeString;
 }
 
 export default getValueType;
