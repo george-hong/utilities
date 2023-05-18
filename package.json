@@ -32,7 +32,7 @@
     "eslint": "npx eslint packages/*/src/*",
     "prettier": "npx prettier --write .",
     "test": "jest",
-    "doc": "typedoc --plugin typedoc-plugin-markdown"
+    "doc": "npx lerna run doc"
   },
   "author": "",
   "license": "ISC",

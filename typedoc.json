@@ -1,6 +1,6 @@
 {
-  "entryPoints": ["packages/*"],
-  "name": "h-utils",
-  "entryPointStrategy": "packages",
-  "includeVersion": true
+  "$schema": "https://typedoc.org/schema.json",
+  "includeVersion": true,
+  "entryPoints": ["./src/index.ts"],
+  "out": "./dist/README.md"
 }

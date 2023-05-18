@@ -8,7 +8,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "rollup --config ../../rollup.config.js",
-    "clear": "rimraf ./dist"
+    "clear": "rimraf ./dist",
+    "doc": "typedoc --plugin typedoc-plugin-markdown --options ./typedoc.json"
   },
   "author": "george-hong",
   "license": "ISC"

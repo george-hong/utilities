@@ -6,6 +6,17 @@ const OBJECT_STRING = 'Object';
  * get type of the value
  * @param value the value that you want to get type
  * @return {string} type of the value
+ * @example
+ * import getValueType from '@h-utils/getValueType';
+ *
+ * getValueType('value'); // 'String'
+ * getValueType(1); // 'Number'
+ * getValueType(true); // 'Boolean'
+ * getValueType(Symbol()); // 'Symbol'
+ * getValueType(Null); // 'Null'
+ * getValueType({}); // 'Object'
+ * getValueType([]); // 'Array'
+ * getValueType(new CustomClass()); // 'CustomClass'
  */
 function getValueType(value: unknown): string {
   const typeString = obj.toString.call(value).slice(8, -1);
