@@ -9,7 +9,7 @@
   "scripts": {
     "build": "rollup --config ../../rollup.config.js",
     "clear": "rimraf ./dist",
-    "doc": "typedoc --plugin typedoc-plugin-markdown --options ./typedoc.json"
+    "md": "typedoc --plugin typedoc-plugin-markdown --options ./typedoc.json && concat-md --decrease-title-levels ./doc > README.md && rimraf ./doc"
   },
   "author": "george-hong",
   "license": "ISC",
