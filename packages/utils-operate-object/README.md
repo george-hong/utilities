@@ -49,7 +49,7 @@ tips
 
 #### Defined in
 
-[index.ts:8](https://github.com/george-hong/utils/blob/fae12a8/packages/utils-operate-object/src/index.ts#L8)
+[index.ts:8](https://github.com/george-hong/utils/blob/203beda/packages/utils-operate-object/src/index.ts#L8)
 
 
 <a name="interfacesiuniformobjectmd"></a>
@@ -98,7 +98,7 @@ tips
 
 #### Defined in
 
-[index.ts:1](https://github.com/george-hong/utils/blob/fae12a8/packages/utils-operate-object/src/index.ts#L1)
+[index.ts:1](https://github.com/george-hong/utils/blob/203beda/packages/utils-operate-object/src/index.ts#L1)
 
 ## Functions
 
@@ -123,4 +123,4 @@ the operation result
 
 #### Defined in
 
-[index.ts:21](https://github.com/george-hong/utils/blob/fae12a8/packages/utils-operate-object/src/index.ts#L21)
+[index.ts:21](https://github.com/george-hong/utils/blob/203beda/packages/utils-operate-object/src/index.ts#L21)

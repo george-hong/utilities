@@ -54,4 +54,4 @@ filter result
 
 #### Defined in
 
-[index.ts:65](https://github.com/george-hong/utils/blob/fae12a8/packages/utils-filter-empty-content/src/index.ts#L65)
+[index.ts:65](https://github.com/george-hong/utils/blob/203beda/packages/utils-filter-empty-content/src/index.ts#L65)

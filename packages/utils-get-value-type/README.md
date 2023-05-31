@@ -67,4 +67,4 @@ type of the value
 
 #### Defined in
 
-[index.ts:21](https://github.com/george-hong/utils/blob/fae12a8/packages/utils-get-value-type/src/index.ts#L21)
+[index.ts:21](https://github.com/george-hong/utils/blob/203beda/packages/utils-get-value-type/src/index.ts#L21)

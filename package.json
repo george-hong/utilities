@@ -13,6 +13,7 @@
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
     "concat-md": "^0.5.1",
+    "cross-env": "^7.0.3",
     "eslint": "^8.37.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -33,7 +34,7 @@
     "eslint": "npx eslint packages/*/src/*",
     "prettier": "npx prettier --write .",
     "test": "jest",
-    "doc": "npx lerna run md"
+    "readme": "npx lerna run readme"
   },
   "author": "",
   "license": "ISC",
