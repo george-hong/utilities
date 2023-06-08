@@ -13,7 +13,7 @@ describe('get value type of', () => {
   // number
   test('number (normal)', () => expect(getValueType(0)).toBe('Number'));
   test('number (constructor)', () => expect(getValueType(Number(7))).toBe('Number'));
-  test('number (NaN)', () => expect(getValueType(NaN)).toBe('Number'));
+  test('number (NaN)', () => expect(getValueType(NaN)).toBe('NaN'));
   test('number (Infinity)', () => expect(getValueType(Infinity)).toBe('Number'));
   // symbol
   test('symbol', () => expect(getValueType(Symbol())).toBe('Symbol'));
