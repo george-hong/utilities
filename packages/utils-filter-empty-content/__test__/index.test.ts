@@ -2,6 +2,9 @@ import filterEmptyContent from '../src';
 
 const EMPTY_OBJECT = {};
 const EMPTY_ARRAY: Array<never> = [];
+const EMPTY_FUNCTION = function () {
+  return;
+};
 const SIMPLE_OBJECT = {
   emptyString: '',
   NaN: NaN,
@@ -9,8 +12,7 @@ const SIMPLE_OBJECT = {
   emptyObject: {},
   emptyArray: [],
   undefined: undefined,
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  function: function () {},
+  function: EMPTY_FUNCTION,
 };
 const SIMPLE_OBJECT_2 = {
   string: '1',
@@ -27,6 +29,12 @@ const DEEP_OBJECT = {
 };
 const DEEP_ARRAY = [[[[[[]]]]]];
 const EMPTY_STRING_OBJECT = { emptyString: '' };
+const NAN_OBJECT = { NaN: NaN };
+const NULL_OBJECT = { null: null };
+const UNDEFINED_OBJECT = { undefined: undefined };
+const INCLUDE_EMPTY_OBJECT = { emptyObject: {} };
+const INCLUDE_EMPTY_ARRAY_OBJECT = { emptyArray: [] };
+const INCLUDE_FUNCTION_OBJECT = { function: EMPTY_FUNCTION };
 
 describe('filter empty content without params', () => {
   test('simple empty', () => expect(filterEmptyContent(SIMPLE_OBJECT)).toEqual(EMPTY_OBJECT));
@@ -47,5 +55,25 @@ describe('filter empty content with deep', () => {
 describe('use config object', () => {
   test('ignore string', () => {
     expect(filterEmptyContent(EMPTY_STRING_OBJECT, false, { emptyString: false })).toEqual(EMPTY_STRING_OBJECT);
+  });
+  test('ignore NaN', () => {
+    expect(filterEmptyContent(NAN_OBJECT, false, { NaN: false })).toEqual(NAN_OBJECT);
+  });
+  test('ignore null', () => {
+    expect(filterEmptyContent(NULL_OBJECT, false, { null: false })).toEqual(NULL_OBJECT);
+  });
+  test('ignore undefined', () => {
+    expect(filterEmptyContent(UNDEFINED_OBJECT, false, { undefined: false })).toEqual(UNDEFINED_OBJECT);
+  });
+  test('ignore empty object', () => {
+    expect(filterEmptyContent(INCLUDE_EMPTY_OBJECT, false, { emptyObject: false })).toEqual(INCLUDE_EMPTY_OBJECT);
+  });
+  test('ignore empty array', () => {
+    expect(filterEmptyContent(INCLUDE_EMPTY_ARRAY_OBJECT, false, { emptyArray: false })).toEqual(
+      INCLUDE_EMPTY_ARRAY_OBJECT
+    );
+  });
+  test('ignore function', () => {
+    expect(filterEmptyContent(INCLUDE_FUNCTION_OBJECT, false, { function: false })).toEqual(INCLUDE_FUNCTION_OBJECT);
   });
 });
