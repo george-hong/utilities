@@ -1,6 +1,6 @@
 {
-  "name": "@h-utils/h-utils",
-  "version": "0.0.4",
+  "name": "@h-utils/utils",
+  "version": "0.0.1",
   "type": "module",
   "description": "",
   "main": "dist/index.cjs.js",
@@ -18,5 +18,7 @@
     "@h-utils/get-value-type": "^0.0.4",
     "@h-utils/operate-object": "^0.0.4"
   },
-  "gitHead": "a98b9fa7bd83a53e7ade2e0402f178ac588aa602"
+  "publishConfig": {
+    "access": "public"
+  }
 }
