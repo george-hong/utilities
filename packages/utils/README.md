@@ -3,7 +3,7 @@
 
 @h-utils/utils
 
-# @h-utils/utils - v0.0.0
+# @h-utils/utils - v0.0.1
 
 ## Table of contents
 

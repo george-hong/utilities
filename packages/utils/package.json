@@ -1,6 +1,6 @@
 {
   "name": "@h-utils/utils",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "description": "",
   "main": "dist/index.cjs.js",
@@ -14,9 +14,9 @@
   "author": "george-hong",
   "license": "ISC",
   "dependencies": {
-    "@h-utils/filter-empty-content": "^0.0.4",
-    "@h-utils/get-value-type": "^0.0.4",
-    "@h-utils/operate-object": "^0.0.4"
+    "@h-utils/filter-empty-content": "0.0.1",
+    "@h-utils/get-value-type": "0.0.1",
+    "@h-utils/operate-object": "0.0.1"
   },
   "publishConfig": {
     "access": "public"
