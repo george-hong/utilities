@@ -3,7 +3,7 @@
 
 @h-utils/get-value-type
 
-# @h-utils/get-value-type - v0.0.1
+# @h-utils/get-value-type - v0.0.2
 
 ## Table of contents
 

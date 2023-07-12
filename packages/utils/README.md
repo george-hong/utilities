@@ -3,7 +3,7 @@
 
 @h-utils/h-utils
 
-# @h-utils/h-utils - v0.0.1
+# @h-utils/h-utils - v0.0.2
 
 ## Table of contents
 
@@ -50,9 +50,10 @@ import getValueType from '@h-utils/getValueType';
 
 getValueType('value'); // 'String'
 getValueType(1); // 'Number'
+getValueType(NaN); // 'NaN'
 getValueType(true); // 'Boolean'
 getValueType(Symbol()); // 'Symbol'
-getValueType(Null); // 'Null'
+getValueType(null); // 'null'
 getValueType({}); // 'Object'
 getValueType([]); // 'Array'
 getValueType(new CustomClass()); // 'CustomClass'

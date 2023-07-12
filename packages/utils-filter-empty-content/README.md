@@ -3,7 +3,7 @@
 
 @h-utils/filter-empty-content
 
-# @h-utils/filter-empty-content - v0.0.1
+# @h-utils/filter-empty-content - v0.0.2
 
 ## Table of contents
 

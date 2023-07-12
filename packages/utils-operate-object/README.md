@@ -3,7 +3,7 @@
 
 @h-utils/operate-object
 
-# @h-utils/operate-object - v0.0.1
+# @h-utils/operate-object - v0.0.2
 
 ## Table of contents
 
@@ -50,7 +50,7 @@ the operation result
 
 <a name="interfacesioperationmd"></a>
 
-[@h-utils/operate-object - v0.0.1](#readmemd) / IOperation
+[@h-utils/operate-object - v0.0.2](#readmemd) / IOperation
 
 # Interface: IOperation
 
@@ -80,7 +80,7 @@ the operation result
 
 <a name="interfacesiuniformobjectmd"></a>
 
-[@h-utils/operate-object - v0.0.1](#readmemd) / IUniformObject
+[@h-utils/operate-object - v0.0.2](#readmemd) / IUniformObject
 
 # Interface: IUniformObject<K\>
 
