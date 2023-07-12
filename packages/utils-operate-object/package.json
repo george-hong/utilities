@@ -1,6 +1,6 @@
 {
   "name": "@h-utils/operate-object",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "description": "",
   "main": "dist/index.cjs.js",
@@ -12,5 +12,6 @@
     "readme": "rimraf ./README.md && cross-env PROJECT_NAME=operate-object typedoc --options ../../typedoc.cjs && concat-md --decrease-title-levels ./doc > README.md && rimraf ./doc"
   },
   "author": "george-hong",
-  "license": "ISC"
+  "license": "ISC",
+  "gitHead": "a98b9fa7bd83a53e7ade2e0402f178ac588aa602"
 }
