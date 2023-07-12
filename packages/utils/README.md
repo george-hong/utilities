@@ -1,9 +1,9 @@
 
 <a name="readmemd"></a>
 
-@h-utils/h-utils
+@h-utils/utils
 
-# @h-utils/h-utils - v0.0.2
+# @h-utils/utils - v0.0.1
 
 ## Table of contents
 
