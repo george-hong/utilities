@@ -35,6 +35,7 @@ const UNDEFINED_OBJECT = { undefined: undefined };
 const INCLUDE_EMPTY_OBJECT = { emptyObject: {} };
 const INCLUDE_EMPTY_ARRAY_OBJECT = { emptyArray: [] };
 const INCLUDE_FUNCTION_OBJECT = { function: EMPTY_FUNCTION };
+const INCLUDE_EMPTY_STRING_AND_UNDEFINED_OBJECT = { emptyString: '', undefined: undefined };
 
 describe('filter empty content without params', () => {
   test('simple empty', () => expect(filterEmptyContent(SIMPLE_OBJECT)).toEqual(EMPTY_OBJECT));
@@ -50,6 +51,48 @@ describe('filter empty content with deep', () => {
   test('mixed object', () => expect(filterEmptyContent(MIXED_SIMPLE_OBJECT, true)).toEqual(SIMPLE_OBJECT_2));
   test('deep object', () => expect(filterEmptyContent(DEEP_OBJECT, true)).toEqual(EMPTY_OBJECT));
   test('deep array', () => expect(filterEmptyContent(DEEP_ARRAY, true)).toEqual(EMPTY_ARRAY));
+});
+
+describe('use deep option', () => {
+  test('deep object', () => {
+    expect(filterEmptyContent({ stringObject: EMPTY_STRING_OBJECT }, true)).toEqual(EMPTY_OBJECT);
+  });
+  test('deep array', () => {
+    expect(
+      filterEmptyContent(
+        [
+          EMPTY_STRING_OBJECT,
+          EMPTY_OBJECT,
+          EMPTY_ARRAY,
+          EMPTY_FUNCTION,
+          NAN_OBJECT,
+          NULL_OBJECT,
+          INCLUDE_FUNCTION_OBJECT,
+          INCLUDE_EMPTY_ARRAY_OBJECT,
+          INCLUDE_EMPTY_STRING_AND_UNDEFINED_OBJECT,
+        ],
+        true
+      )
+    ).toEqual(EMPTY_ARRAY);
+  });
+  test('deep object', () => {
+    expect(
+      filterEmptyContent(
+        {
+          eStrObj: EMPTY_STRING_OBJECT,
+          eObj: EMPTY_OBJECT,
+          eArr: EMPTY_ARRAY,
+          eFn: EMPTY_FUNCTION,
+          nanObj: NAN_OBJECT,
+          nullObj: NULL_OBJECT,
+          iEFnObj: INCLUDE_FUNCTION_OBJECT,
+          iEArrObj: INCLUDE_EMPTY_ARRAY_OBJECT,
+          iEStrAndUndefinedObj: INCLUDE_EMPTY_STRING_AND_UNDEFINED_OBJECT,
+        },
+        true
+      )
+    ).toEqual(EMPTY_OBJECT);
+  });
 });
 
 describe('use config object', () => {
@@ -75,5 +118,10 @@ describe('use config object', () => {
   });
   test('ignore function', () => {
     expect(filterEmptyContent(INCLUDE_FUNCTION_OBJECT, false, { function: false })).toEqual(INCLUDE_FUNCTION_OBJECT);
+  });
+  test('ignore empty string and undefined', () => {
+    expect(
+      filterEmptyContent(INCLUDE_EMPTY_STRING_AND_UNDEFINED_OBJECT, false, { emptyString: false, undefined: false })
+    ).toEqual(INCLUDE_EMPTY_STRING_AND_UNDEFINED_OBJECT);
   });
 });

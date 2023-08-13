@@ -58,7 +58,7 @@ function parseFilterConfig(config: IFilterConfig = {}): checkIsNeedType {
 /**
  * filter the content of array or object, bump the field which value is ''、undefined、null、{}、[]
  * @param {Object | Array} target The value you want to filter,except object or array.
- * @param {boolean} isDeep If field is an array of object,filter it or not.
+ * @param {boolean} [isDeep = false] If field is an array of object,filter it or not.
  * @param {Function} filterConfig The method or config to filter value.
  * @returns {null | Object | Array} filter result
  */
